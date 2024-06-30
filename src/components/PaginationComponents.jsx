@@ -1,7 +1,14 @@
-import React from 'react';
+import { Pagination } from 'antd';
 
-const PaginationComponents = () => {
-  return <div>PaginationComponents</div>;
-};
+const PaginationComponent = ({ current, total, onChange }) => (
+  <div style={{ padding: '50px 0' }}>
+    <Pagination
+      current={current}
+      total={total}
+      pageSize={10}
+      onChange={(page) => onChange(page)}
+    />
+  </div>
+);
 
-export default PaginationComponents;
+export default PaginationComponent;
