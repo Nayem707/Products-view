@@ -1,7 +1,18 @@
+import { Outlet } from 'react-router-dom';
+
+//import ant-design dependency folder
+import { Layout } from 'antd';
+
+//define ant-design layout
+const { Header } = Layout;
+
 function App() {
   return (
     <>
-      <h1>Hello</h1>
+      <Layout>
+        <Header style={{ color: 'white', textAlign: 'center' }}>Home</Header>
+        <Outlet />
+      </Layout>
     </>
   );
 }
